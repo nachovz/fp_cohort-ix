@@ -19,6 +19,8 @@ export class Home extends React.Component {
 				<Link to="/checkoutForm">Check-Out Form</Link>
 				<br />
 				<Link to="/login">Login</Link>
+				<br />
+				<Link to="/gallery">Gallery</Link>
 			</div>
 		);
 	}
