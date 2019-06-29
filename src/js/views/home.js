@@ -15,7 +15,10 @@ export class Home extends React.Component {
 				<a href="#" className="btn btn-success">
 					If you see this green button, bootstrap is working
 				</a>
+				<br />
 				<Link to="/checkoutForm">Check-Out Form</Link>
+				<br />
+				<Link to="/login">Login</Link>
 			</div>
 		);
 	}
