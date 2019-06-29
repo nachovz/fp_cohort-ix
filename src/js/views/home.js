@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 
@@ -13,6 +15,7 @@ export class Home extends React.Component {
 				<a href="#" className="btn btn-success">
 					If you see this green button, bootstrap is working
 				</a>
+				<Link to="/checkoutForm">Check-Out Form</Link>
 			</div>
 		);
 	}

@@ -4,6 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
+import { CheckoutForm } from "./views/checkoutForm";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -25,6 +26,7 @@ export class Layout extends React.Component {
 						<Switch>
 							<Route exact path="/" component={Home} />
 							<Route path="/demo" component={Demo} />
+							<Route path="/checkoutForm" component={CheckoutForm} />
 							<Route path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
