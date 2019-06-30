@@ -7,6 +7,7 @@ import { Demo } from "./views/demo";
 import { CheckoutForm } from "./views/checkoutForm";
 import { Login } from "./views/login";
 import { Gallery } from "./views/gallery";
+import { UserRegistrationEdit } from "./views/userRegistrationEdit";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -31,6 +32,7 @@ export class Layout extends React.Component {
 							<Route path="/checkoutForm" component={CheckoutForm} />
 							<Route path="/login" component={Login} />
 							<Route path="/gallery" component={Gallery} />
+							<Route path="/userRegistrationEdit" component={UserRegistrationEdit} />
 							<Route path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>

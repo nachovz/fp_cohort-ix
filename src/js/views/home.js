@@ -21,6 +21,8 @@ export class Home extends React.Component {
 				<Link to="/login">Login</Link>
 				<br />
 				<Link to="/gallery">Gallery</Link>
+				<br />
+				<Link to="/userRegistrationEdit">New User Registration/ Profile Edit</Link>
 			</div>
 		);
 	}
