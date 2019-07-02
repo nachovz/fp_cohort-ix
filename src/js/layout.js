@@ -13,7 +13,9 @@ import injectContext from "./store/appContext";
 import { Createaccount } from "./views/createaccount";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-
+import { Review } from "./views/review";
+import { Itempage } from "./views/itempage";
+import { Cart } from "./views/cart";
 //create your first component
 export class Layout extends React.Component {
 	render() {
@@ -35,6 +37,9 @@ export class Layout extends React.Component {
 							<Route path="/userRegistrationEdit" component={UserRegistrationEdit} />
 							<Route path="/single/:theid" component={Single} />
 							<Route path="/createaccount" component={Createaccount} />
+							<Route path="/review" component={Review} />
+							<Route path="/itempage" component={Itempage} />
+							<Route path="/cart" component={Cart} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />

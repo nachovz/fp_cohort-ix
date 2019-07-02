@@ -1,9 +1,10 @@
 import React from "react";
-
+import { Navbar } from "./navbar";
 export class Createaccount extends React.Component {
 	render() {
 		return (
 			<div>
+				<Navbar />
 				<h1 className="mx-auto" style={{ width: "200px" }}>
 					Create account
 				</h1>
