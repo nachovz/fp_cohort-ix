@@ -11,11 +11,12 @@ import { UserRegistrationEdit } from "./views/userRegistrationEdit";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import { Createaccount } from "./views/createaccount";
-import { Navbar } from "./component/navbar";
+import { Navbar } from "./views/navbar";
 import { Footer } from "./component/footer";
 import { Review } from "./views/review";
 import { Itempage } from "./views/itempage";
 import { Cart } from "./views/cart";
+import { Itemhistory } from "./views/itemhistory";
 //create your first component
 export class Layout extends React.Component {
 	render() {
@@ -27,7 +28,6 @@ export class Layout extends React.Component {
 			<div className="d-flex flex-column h-100">
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
-						<Navbar />
 						<Switch>
 							<Route exact path="/" component={Home} />
 							<Route path="/demo" component={Demo} />
@@ -40,6 +40,7 @@ export class Layout extends React.Component {
 							<Route path="/review" component={Review} />
 							<Route path="/itempage" component={Itempage} />
 							<Route path="/cart" component={Cart} />
+							<Route path="/itemhistory" component={Itemhistory} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />
