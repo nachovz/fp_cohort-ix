@@ -10,6 +10,7 @@ export class Cart extends React.Component {
 					<div className="col border">Item</div>
 					<div className="col border">Price</div>
 					<div className="col border">Quantity</div>
+					<div className="col border" />
 				</div>
 				<div className="row">
 					<div className="col border">
@@ -29,6 +30,11 @@ export class Cart extends React.Component {
 					</div>
 					<div className="col border">$5.99</div>
 					<div className="col border">2</div>
+					<div className="col border">
+						<button type="button" className="btn btn-link">
+							Remove
+						</button>
+					</div>
 				</div>
 				<div className="row">
 					<div className="col border">
@@ -48,6 +54,11 @@ export class Cart extends React.Component {
 					</div>
 					<div className="col border">$5.99</div>
 					<div className="col border">2</div>
+					<div className="col border">
+						<button type="button" className="btn btn-link">
+							Remove
+						</button>
+					</div>
 				</div>
 				<div className="row">
 					<div className="col border">
@@ -67,6 +78,11 @@ export class Cart extends React.Component {
 					</div>
 					<div className="col border">$5.99</div>
 					<div className="col border">2</div>
+					<div className="col border">
+						<button type="button" className="btn btn-link">
+							Remove
+						</button>
+					</div>
 				</div>
 				<div className="row">
 					<div className="col border">
@@ -86,8 +102,14 @@ export class Cart extends React.Component {
 					</div>
 					<div className="col border">$5.99</div>
 					<div className="col border">2</div>
+					<div className="col border">
+						<button type="button" className="btn btn-link">
+							Remove
+						</button>
+					</div>
 				</div>
 				<div className="row">
+					<div className="col" />
 					<div className="col" />
 					<div className="col" />
 					<div className="col">
