@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Navbar } from "./navbar";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
@@ -9,7 +8,6 @@ export class Gallery extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<Navbar />
 				<main role="main">
 					<section className="jumbotron text-center">
 						<div className="container">
@@ -363,10 +361,6 @@ export class Gallery extends React.Component {
 						</div>
 					</div>
 				</main>
-
-				<Link to="/">
-					<button className="btn btn-primary">Back home</button>
-				</Link>
 			</div>
 		);
 	}

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Navbar } from "./navbar";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
@@ -9,7 +8,6 @@ export class UserRegistrationEdit extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<Navbar />
 				<div className="py-5 text-center">
 					<img
 						className="d-block mx-auto mb-4"
@@ -137,9 +135,6 @@ export class UserRegistrationEdit extends React.Component {
 						</button>
 					</form>
 				</div>
-				<Link to="/">
-					<button className="btn btn-primary">Back home</button>
-				</Link>
 			</div>
 		);
 	}

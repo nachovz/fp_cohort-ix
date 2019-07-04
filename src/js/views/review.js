@@ -1,10 +1,9 @@
 import React from "react";
-import { Navbar } from "./navbar";
+
 export class Review extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar />
 				<div className="d-flex justify-content-center ">
 					<span className="rate-this-stars">
 						<h5>Rate this page</h5>

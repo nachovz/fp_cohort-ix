@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Navbar } from "./navbar";
 
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
@@ -10,7 +9,6 @@ export class Home extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<Navbar />
 				<div className="jumbotron jumbotron-fluid">
 					<div className="nav justify-content-center">
 						<h1 className="display-4">COOLIO TOYS</h1>
@@ -180,16 +178,6 @@ export class Home extends React.Component {
 							</a>
 						</div>
 					</div>
-				</div>
-				<div className="text-center mt-5">
-					<br />
-					<Link to="/checkoutForm">Check-Out Form</Link>
-					<br />
-					<Link to="/login">Login</Link>
-					<br />
-					<Link to="/gallery">Gallery</Link>
-					<br />
-					<Link to="/userRegistrationEdit">New User Registration/ Profile Edit</Link>
 				</div>
 			</React.Fragment>
 		);

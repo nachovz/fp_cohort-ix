@@ -11,7 +11,7 @@ import { UserRegistrationEdit } from "./views/userRegistrationEdit";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import { Createaccount } from "./views/createaccount";
-import { Navbar } from "./views/navbar";
+import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Review } from "./views/review";
 import { Itempage } from "./views/itempage";
@@ -28,14 +28,15 @@ export class Layout extends React.Component {
 			<div className="d-flex flex-column h-100">
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
+						<Navbar />
 						<Switch>
 							<Route exact path="/" component={Home} />
-							<Route path="/demo" component={Demo} />
+
 							<Route path="/checkoutForm" component={CheckoutForm} />
 							<Route path="/login" component={Login} />
 							<Route path="/gallery" component={Gallery} />
 							<Route path="/userRegistrationEdit" component={UserRegistrationEdit} />
-							<Route path="/single/:theid" component={Single} />
+
 							<Route path="/createaccount" component={Createaccount} />
 							<Route path="/review" component={Review} />
 							<Route path="/itempage" component={Itempage} />

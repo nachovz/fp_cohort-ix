@@ -1,10 +1,9 @@
 import React from "react";
-import { Navbar } from "./navbar";
+
 export class Itemhistory extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar />
 				<h1>Item history</h1>
 				<div className="row">
 					<div className="col border">Item</div>

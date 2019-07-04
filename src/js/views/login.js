@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Navbar } from "./navbar";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
@@ -9,7 +8,6 @@ export class Login extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<Navbar />
 				<body className="text-center">
 					<form
 						className="form-signin"
@@ -51,9 +49,6 @@ export class Login extends React.Component {
 						<p className="mt-5 mb-3 text-muted">© 2017-2019</p>
 					</form>
 				</body>
-				<Link to="/">
-					<button className="btn btn-primary">Back home</button>
-				</Link>
 			</div>
 		);
 	}

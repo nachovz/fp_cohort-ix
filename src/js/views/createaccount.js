@@ -1,10 +1,9 @@
 import React from "react";
-import { Navbar } from "./navbar";
+
 export class Createaccount extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar />
 				<h1 className="mx-auto" style={{ width: "200px" }}>
 					Create account
 				</h1>
@@ -79,7 +78,6 @@ export class Createaccount extends React.Component {
 						</div>
 						<div className="form-group">
 							<div className="form-check">
-								<input className="form-check-input" type="checkbox" id="gridCheck" />
 								<label className="form-check-label" htmlFor="gridCheck" />
 							</div>
 						</div>

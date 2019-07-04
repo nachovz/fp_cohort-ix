@@ -1,10 +1,8 @@
 import React from "react";
-import { Navbar } from "./navbar";
 export class Itempage extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar />
 				<h1>Item page</h1>
 				<div className="row">
 					<div className="col">Name of product</div>
