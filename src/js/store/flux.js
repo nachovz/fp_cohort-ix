@@ -1,16 +1,50 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			demo: [
+			product: [
 				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
+					name: "toy1",
+					price: "$11",
+					image: "https://picsum.photos/id/1070/430/180",
+					description: "white",
+					age_group: "1-2",
+					weight: "123lbs"
 				},
 				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
+					name: "toy2",
+					price: "$13",
+					image: "https://picsum.photos/id/905/430/180",
+					description: "yellow",
+					age_group: "10-12",
+					weight: "80lbs"
+				},
+				{
+					name: "toy3",
+					price: "$15",
+					image: "https://picsum.photos/id/295/430/180",
+					description: "blue",
+					age_group: "13+",
+					weight: "2lbs"
+				},
+				{
+					name: "toy4",
+					price: "$200",
+					image: "https://picsum.photos/id/1060/430/180",
+					description: "red",
+					age_group: "5-7",
+					weight: "24lbs"
+				}
+			],
+			user: [
+				{
+					full_name: "ff",
+					address: "",
+					phone_number: "",
+					e_mail: "",
+					password: "",
+					city: "",
+					state: "",
+					zip: ""
 				}
 			]
 		},
