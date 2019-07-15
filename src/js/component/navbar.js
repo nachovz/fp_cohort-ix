@@ -56,7 +56,7 @@ export class Navbar extends React.Component {
 							<li className="nav-item active">
 								<Link to="/gallery">
 									<a className="nav-link" href="#">
-										All items
+										CATEGORIES
 									</a>
 								</Link>
 							</li>

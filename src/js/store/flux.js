@@ -8,7 +8,8 @@ const getState = ({ getStore, setStore }) => {
 					image: "https://picsum.photos/id/1070/430/180",
 					description: "white",
 					age_group: "1-2",
-					weight: "123lbs"
+					weight: "123lbs",
+					category: ""
 				},
 				{
 					name: "toy2",
@@ -16,7 +17,8 @@ const getState = ({ getStore, setStore }) => {
 					image: "https://picsum.photos/id/905/430/180",
 					description: "yellow",
 					age_group: "10-12",
-					weight: "80lbs"
+					weight: "80lbs",
+					category: ""
 				},
 				{
 					name: "toy3",
@@ -24,7 +26,8 @@ const getState = ({ getStore, setStore }) => {
 					image: "https://picsum.photos/id/295/430/180",
 					description: "blue",
 					age_group: "13+",
-					weight: "2lbs"
+					weight: "2lbs",
+					category: ""
 				},
 				{
 					name: "toy4",
@@ -32,7 +35,8 @@ const getState = ({ getStore, setStore }) => {
 					image: "https://picsum.photos/id/1060/430/180",
 					description: "red",
 					age_group: "5-7",
-					weight: "24lbs"
+					weight: "24lbs",
+					category: ""
 				}
 			],
 			user: [
@@ -45,6 +49,15 @@ const getState = ({ getStore, setStore }) => {
 					city: "",
 					state: "",
 					zip: ""
+				}
+			],
+			cart: [
+				{
+					name: "",
+					price: "",
+					image: "",
+					description: "",
+					quantity: ""
 				}
 			]
 		},
