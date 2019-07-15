@@ -1,4 +1,6 @@
 import React from "react";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import "../../styles/home.scss";
 import { Link } from "react-router-dom";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Fade } from "reactstrap";
 import PropTypes from "prop-types";
@@ -53,13 +55,13 @@ export class Navbar extends React.Component {
 									</a>
 								</Link>
 							</li>
-							<li className="nav-item active">
-								<Link to="/gallery">
-									<a className="nav-link" href="#">
-										CATEGORIES
-									</a>
-								</Link>
-							</li>
+
+							<NavDropdown title="CATEGORIES" id="basic-nav-dropdown">
+								<NavDropdown.Item href="/gallery">TODDLERS</NavDropdown.Item>
+								<NavDropdown.Item href="/gallery">BOARD GAMES</NavDropdown.Item>
+								<NavDropdown.Item href="/gallery">COLLECTIBLES</NavDropdown.Item>
+							</NavDropdown>
+
 							<li className="nav-item active">
 								<Link to="/cart">
 									<a className="nav-link" href="#">
