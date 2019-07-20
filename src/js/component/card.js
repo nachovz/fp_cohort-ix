@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { CartItem } from "./cartItem";
 import { Context } from "../store/appContext.js";
+// import { Button } from "reactstrap";
 export const Card = props => {
 	return (
 		<React.Fragment>
@@ -10,27 +11,26 @@ export const Card = props => {
 					<img className="card-img-top" src={props.image} alt="Card image cap" />
 
 					<div className="card-body">
-						<Context.Consumer>
-							{({ actions }) => {
-								return (
-									<button
-										type="button"
-										className="btn btn-link"
-										onClick={() => {
-											debugger;
-											actions.addToCart(props.cricket);
-										}}>
-										<h5 className="card-title">{props.name}</h5>
-									</button>
-								);
-							}}
-						</Context.Consumer>
+						<button type="button" className="btn btn-link">
+							<h5 className="card-title">{props.name}</h5>
+						</button>
 
 						<p className="card-text" />
 						<span>{props.price}</span>
-						<a href="#" className="btn btn-primary">
-							Add to cart
-						</a>
+						<Context.Consumer>
+							{({ actions }) => {
+								return (
+									<a
+										href="#"
+										className="btn btn-primary"
+										onClick={() => {
+											actions.addToCart(props.cricket);
+										}}>
+										Add to cart
+									</a>
+								);
+							}}
+						</Context.Consumer>
 					</div>
 				</div>
 			</div>
