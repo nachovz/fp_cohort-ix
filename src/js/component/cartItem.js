@@ -55,6 +55,5 @@ CartItem.propTypes = {
 	name: PropTypes.string,
 	price: PropTypes.string,
 	image: PropTypes.string,
-	description: PropTypes.String,
-	quantity: PropTypes.string
+	description: PropTypes.String
 };

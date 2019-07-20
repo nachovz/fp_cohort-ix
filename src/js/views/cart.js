@@ -10,9 +10,9 @@ export class Cart extends React.Component {
 					<div className="card-header bg-dark text-light">
 						<i className="fa fa-shopping-cart" aria-hidden="true" />
 						Shopping cart
-						<a href="" className="btn btn-outline-info btn-sm pull-right">
+						{/*<a href="" className="btn btn-outline-info btn-sm pull-right">
 							Continue shopping
-						</a>
+						</a>*/}
 						<div className="clearfix" />
 					</div>
 					<div className="card-body">
@@ -86,20 +86,20 @@ export class Cart extends React.Component {
 						<hr />
 
 						<div className="pull-right">
-							<a href="" className="btn btn-outline-secondary pull-right">
+							{/*<a href="" className="btn btn-outline-secondary pull-right">
 								Update shopping cart
-							</a>
+							</a>*/}
 						</div>
 					</div>
 					<div className="card-footer">
 						<div className="coupon col-md-5 col-sm-5 no-padding-left pull-left">
 							<div className="row">
-								<div className="col-6">
+								{/*<div className="col-6">
 									<input type="text" className="form-control" placeholder="cupone code" />
 								</div>
 								<div className="col-6">
 									<input type="submit" className="btn btn-default" value="Use cupone" />
-								</div>
+								</div>*/}
 							</div>
 						</div>
 						<div className="pull-right" style={{ margin: 10 }}>
