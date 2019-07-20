@@ -51,13 +51,13 @@ const getState = ({ getStore, setStore }) => {
 					zip: ""
 				}
 			],
-			cart: [
+			cartItem: [
 				{
-					name: "",
-					price: "",
-					image: "",
-					description: "",
-					quantity: ""
+					name: "mm",
+					price: "aa",
+					image: "https://picsum.photos/id/931/120/80",
+					description: "ss",
+					quantity: "33"
 				}
 			]
 		},
