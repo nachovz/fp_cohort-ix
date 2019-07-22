@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Context } from "../store/appContext.js";
 
 export const CartItem = props => {
 	return (
@@ -41,9 +42,20 @@ export const CartItem = props => {
 						</div>
 					</div>
 					<div className="col-2 col-sm-2 col-md-2 text-right">
-						<button type="button" className="btn btn-outline-danger btn-xs">
-							<i className="fa fa-trash" aria-hidden="true" />
-						</button>
+						<Context.Consumer>
+							{({ actions }) => {
+								return (
+									<button
+										type="button"
+										className="btn btn-outline-danger btn-xs"
+										onClick={() => {
+											actions.deleteElement(props.flying);
+										}}>
+										<i className="fa fa-trash" aria-hidden="true" />
+									</button>
+								);
+							}}
+						</Context.Consumer>
 					</div>
 				</div>
 			</div>
@@ -55,5 +67,6 @@ CartItem.propTypes = {
 	name: PropTypes.string,
 	price: PropTypes.string,
 	image: PropTypes.string,
-	description: PropTypes.String
+	description: PropTypes.String,
+	flying: PropTypes.func
 };

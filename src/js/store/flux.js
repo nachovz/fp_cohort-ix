@@ -53,11 +53,13 @@ const getState = ({ getStore, setStore }) => {
 			],
 			cartItem: [
 				{
+					/*{
 					name: "mm",
 					price: "aa",
 					image: "https://picsum.photos/id/931/120/80",
 					description: "ss",
 					quantity: "33"
+                }*/
 				}
 			]
 		},
@@ -69,9 +71,9 @@ const getState = ({ getStore, setStore }) => {
 				setStore({ tempStore });
 			},
 			deleteElement: index => {
-				let tempState = this.state;
-				tempState.list.splice(index, 1);
-				this.setState(tempState);
+				var tempStore = getStore();
+				tempStore.cartItem.splice(index, 1);
+				setStore({ tempStore });
 			}
 		}
 	};
