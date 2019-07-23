@@ -66,7 +66,7 @@ const getState = ({ getStore, setStore }) => {
 		actions: {
 			addToCart: koala => {
 				var tempStore = getStore();
-				console.log(tempStore);
+				// console.log(tempStore);
 				tempStore.cartItem.push(koala);
 				setStore({ tempStore });
 			},

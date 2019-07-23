@@ -17,17 +17,68 @@ export class Cart extends React.Component {
 					</div>
 					<div className="card-body">
 						<Context.Consumer>
-							{({ store }) => {
+							{({ store, actions }) => {
 								return store.cartItem.map((elem, index) => {
+									{
+										/*console.log(elem.flying);*/
+									}
 									return (
-										<CartItem
-											name={elem.name}
-											price={elem.price}
-											description={elem.description}
-											image={elem.image}
-											quantity={elem.quantity}
-											key={index}
-										/>
+										<div className="row" key={index}>
+											<div className="col-12 col-sm-12 col-md-2 text-center">
+												<img
+													className="img-responsive"
+													src={elem.image}
+													alt="prewiew"
+													width="120"
+													height="80"
+												/>
+											</div>
+											<div className="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+												<h4 className="product-name">
+													<strong>{elem.name}</strong>
+												</h4>
+												<h4>
+													<small>{elem.description}</small>
+												</h4>
+											</div>
+											<div className="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+												<div
+													className="col-3 col-sm-3 col-md-6 text-md-right"
+													style={{ paddingTop: 5 }}>
+													<h6>
+														<strong>
+															{elem.price} <span className="text-muted">x</span>
+														</strong>
+													</h6>
+												</div>
+												<div className="col-4 col-sm-4 col-md-4">
+													<div className="quantity">
+														<input type="button" value="+" className="plus" />
+														<input
+															type="number"
+															step="1"
+															max="99"
+															min="1"
+															value="1"
+															title="Qty"
+															className="qty"
+															size="4"
+														/>
+														<input type="button" value="-" className="minus" />
+													</div>
+												</div>
+												<div className="col-2 col-sm-2 col-md-2 text-right">
+													<button
+														type="button"
+														className="btn btn-outline-danger btn-xs"
+														onClick={() => {
+															actions.deleteElement(index);
+														}}>
+														<i className="fa fa-trash" aria-hidden="true" />
+													</button>
+												</div>
+											</div>
+										</div>
 									);
 								});
 							}}

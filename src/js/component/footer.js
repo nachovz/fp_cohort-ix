@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => (
 	<div className="card">
@@ -24,9 +25,11 @@ export const Footer = () => (
 					</button>
 				</div>
 				<div className="col">
-					<button type="button" className="btn btn-warning">
-						Return Policy
-					</button>
+					<Link to="/returnpolicy">
+						<button type="button" className="btn btn-warning">
+							Return Policy
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>

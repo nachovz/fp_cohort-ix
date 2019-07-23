@@ -17,6 +17,7 @@ import { Review } from "./views/review";
 import { Itempage } from "./views/itempage";
 import { Cart } from "./views/cart";
 import { Itemhistory } from "./views/itemhistory";
+import { ReturnPolicy } from "./views/returnpolicy";
 //create your first component
 export class Layout extends React.Component {
 	render() {
@@ -42,6 +43,7 @@ export class Layout extends React.Component {
 							<Route path="/itempage" component={Itempage} />
 							<Route path="/cart" component={Cart} />
 							<Route path="/itemhistory" component={Itemhistory} />
+							<Route path="/returnpolicy" component={ReturnPolicy} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />

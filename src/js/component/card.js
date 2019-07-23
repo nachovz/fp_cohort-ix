@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { CartItem } from "./cartItem";
 import { Context } from "../store/appContext.js";
+import { Link } from "react-router-dom";
 // import { Button } from "reactstrap";
 export const Card = props => {
 	return (
@@ -11,9 +12,11 @@ export const Card = props => {
 					<img className="card-img-top" src={props.image} alt="Card image cap" />
 
 					<div className="card-body">
-						<button type="button" className="btn btn-link">
-							<h5 className="card-title">{props.name}</h5>
-						</button>
+						<Link to="/itempage">
+							<button type="button" className="btn btn-link">
+								<h5 className="card-title">{props.name}</h5>
+							</button>
+						</Link>
 
 						<p className="card-text" />
 						<span>{props.price}</span>
