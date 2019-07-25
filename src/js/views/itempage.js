@@ -1,46 +1,91 @@
 import React from "react";
+import { Context } from "../store/appContext.js";
+import PropTypes from "prop-types";
+
 export class Itempage extends React.Component {
+	constructor() {
+		super();
+		this.state = {};
+	}
 	render() {
+		const productid = parseInt(this.props.match.params.theid);
 		return (
-			<div>
-				<h1>Item page</h1>
-				<div className="row">
-					<div className="col">Name of product</div>
-					<div className="col" />
-					<div className="col">
-						<button type="button" className="btn btn-primary">
-							Add to cart
-						</button>
-					</div>
-				</div>
-				<div className="mx-auto" style={{ width: 200 }}>
-					<div className="card" style={{ width: 350 }}>
-						<img className="card-img-top" src="..." alt="Card image cap" />
-						<div classNme="card-body">
-							<h5 className="card-title">Card title</h5>
-							<p className="card-text">
-								Some quick example text to build on the card title and make up the bulk of the cards
-								content.
-							</p>
-							<a href="#" className="btn btn-primary">
-								Go somewhere
-							</a>
+			<Context.Consumer>
+				{({ store }) => {
+					const list = store.product.filter(product => product.id === productid);
+					if (!list)
+						return (
+							<h2>
+								No product with id:
+								{productid}
+							</h2>
+						);
+					return (
+						<div>
+							<div className="container">
+								<h1 className="my-4">
+									<small>{list === "productid"}</small>
+								</h1>
+
+								<div className="row">
+									<div className="col-md-8">
+										<img className="img-fluid" src="http://placehold.it/750x500" alt="" />
+									</div>
+
+									<div className="col-md-4">
+										<h3 className="my-3">Product Description</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod
+											odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in
+											adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis
+											placerat, felis enim.
+										</p>
+										<h3 className="my-3">Product Details</h3>
+										<ul>
+											<li>Lorem Ipsum</li>
+											<li>Dolor Sit Amet</li>
+											<li>Consectetur</li>
+											<li>Adipiscing Elit</li>
+										</ul>
+									</div>
+								</div>
+
+								<h3 className="my-4">Related Productd</h3>
+
+								<div className="row">
+									<div className="col-md-3 col-sm-6 mb-4">
+										<a href="#">
+											<img className="img-fluid" src="http://placehold.it/500x300" alt="" />
+										</a>
+									</div>
+
+									<div className="col-md-3 col-sm-6 mb-4">
+										<a href="#">
+											<img className="img-fluid" src="http://placehold.it/500x300" alt="" />
+										</a>
+									</div>
+
+									<div className="col-md-3 col-sm-6 mb-4">
+										<a href="#">
+											<img className="img-fluid" src="http://placehold.it/500x300" alt="" />
+										</a>
+									</div>
+
+									<div className="col-md-3 col-sm-6 mb-4">
+										<a href="#">
+											<img className="img-fluid" src="http://placehold.it/500x300" alt="" />
+										</a>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div>
-					<a>Product info:</a>
-				</div>
-				<div>
-					<ul>
-						<li>ererererer</li>
-						<li>ererererer</li>
-						<li>ererererer</li>
-						<li>ererererer</li>
-						<li>ererererer</li>
-					</ul>
-				</div>
-			</div>
+					);
+				}}
+			</Context.Consumer>
 		);
 	}
 }
+
+Itempage.propTypes = {
+	match: PropTypes.object
+};

@@ -40,7 +40,7 @@ export class Layout extends React.Component {
 
 							<Route path="/createaccount" component={Createaccount} />
 							<Route path="/review" component={Review} />
-							<Route path="/itempage" component={Itempage} />
+							<Route path="/itempage/:theid" component={Itempage} />
 							<Route path="/cart" component={Cart} />
 							<Route path="/itemhistory" component={Itemhistory} />
 							<Route path="/returnpolicy" component={ReturnPolicy} />

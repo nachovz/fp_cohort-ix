@@ -12,7 +12,7 @@ export const Card = props => {
 					<img className="card-img-top" src={props.image} alt="Card image cap" />
 
 					<div className="card-body">
-						<Link to="/itempage">
+						<Link to="/itempage/:theid">
 							<button type="button" className="btn btn-link">
 								<h5 className="card-title">{props.name}</h5>
 							</button>
