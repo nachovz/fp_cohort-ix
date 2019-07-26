@@ -24,7 +24,7 @@ export class Itempage extends React.Component {
 						<div>
 							<div className="container">
 								<h1 className="my-4">
-									<small>{list === "productid"}</small>
+									<small>{productid === productid}</small>
 								</h1>
 
 								<div className="row">
@@ -50,7 +50,7 @@ export class Itempage extends React.Component {
 									</div>
 								</div>
 
-								<h3 className="my-4">Related Productd</h3>
+								<h3 className="my-4">Related Products</h3>
 
 								<div className="row">
 									<div className="col-md-3 col-sm-6 mb-4">

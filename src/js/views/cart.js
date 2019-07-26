@@ -1,7 +1,7 @@
 import React from "react";
 import { Context } from "../store/appContext.js";
 import { CartItem } from "../component/cartItem";
-
+import { Link } from "react-router-dom";
 export class Cart extends React.Component {
 	render() {
 		return (
@@ -105,9 +105,11 @@ export class Cart extends React.Component {
 							</div>
 						</div>
 						<div className="pull-right" style={{ margin: 10 }}>
-							<a href="" className="btn btn-success pull-right">
-								Checkout
-							</a>
+							<Link to="checkoutform">
+								<a href="" className="btn btn-success pull-right">
+									Checkout
+								</a>
+							</Link>
 							<div className="pull-right" style={{ margin: 5 }}>
 								Total price: <b>50.00€</b>
 							</div>

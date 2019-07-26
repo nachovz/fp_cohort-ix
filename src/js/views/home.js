@@ -14,7 +14,7 @@ export class Home extends React.Component {
 						<h1 className="display-4">COOLIO TOYS</h1>
 					</div>
 				</div>
-				<h1>Popular Items</h1>
+				<h1 />
 				<div className="nav justify-content-center">
 					<Context.Consumer>
 						{({ store }) => {
@@ -35,7 +35,7 @@ export class Home extends React.Component {
 						}}
 					</Context.Consumer>
 				</div>
-				<h1>Recommended items</h1>
+				{/*<h1>Recommended items</h1>
 				<div className="nav justify-content-center">
 					<div className="card" style={{ width: 350 }}>
 						<img className="card-img-top" src="https://picsum.photos/id/950/430/180" alt="Card image cap" />
@@ -160,7 +160,7 @@ export class Home extends React.Component {
 							</a>
 						</div>
 					</div>
-				</div>
+				</div>*/}
 			</React.Fragment>
 		);
 	}

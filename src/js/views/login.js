@@ -43,9 +43,11 @@ export class Login extends React.Component {
 						<button className="btn btn-lg btn-primary btn-block" type="submit">
 							Sign in
 						</button>
-						<button className="btn btn-lg btn-primary btn-block" type="submit">
-							Create Account
-						</button>
+						<Link to="createaccount">
+							<button className="btn btn-lg btn-primary btn-block" type="submit">
+								Create Account
+							</button>
+						</Link>
 						<p className="mt-5 mb-3 text-muted">© 2017-2019</p>
 					</form>
 				</body>
