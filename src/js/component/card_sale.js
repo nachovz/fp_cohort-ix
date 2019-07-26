@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { CartItem } from "./cartItem";
+
 import { Context } from "../store/appContext.js";
 import { Link } from "react-router-dom";
-// import { Button } from "reactstrap";
-export const Card = props => {
+
+export const Card_sale = props => {
 	return (
 		<React.Fragment>
 			<div className="nav justify-content-center">
@@ -27,7 +27,7 @@ export const Card = props => {
 										href="#"
 										className="btn btn-primary"
 										onClick={() => {
-											actions.addToCart(props.cricket);
+											actions.addToCart(props.frog);
 										}}>
 										Add to cart
 									</a>
@@ -41,10 +41,10 @@ export const Card = props => {
 	);
 };
 
-Card.propTypes = {
+Card_sale.propTypes = {
 	name: PropTypes.string,
 	price: PropTypes.string,
 	image: PropTypes.string,
-	cricket: PropTypes.object,
+	frog: PropTypes.object,
 	id: PropTypes.number
 };

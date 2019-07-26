@@ -28,6 +28,7 @@ export class Home extends React.Component {
 										age_group={elem.age_group}
 										weight={elem.weight}
 										key={index}
+										id={elem.id}
 										cricket={elem}
 									/>
 								);

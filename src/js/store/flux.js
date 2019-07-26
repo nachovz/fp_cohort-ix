@@ -10,7 +10,7 @@ const getState = ({ getStore, setStore }) => {
 					age_group: "1-2",
 					weight: "123lbs",
 					category: "",
-					id: "1"
+					id: 1
 				},
 				{
 					name: "toy2",
@@ -20,7 +20,7 @@ const getState = ({ getStore, setStore }) => {
 					age_group: "10-12",
 					weight: "80lbs",
 					category: "",
-					id: "2"
+					id: 2
 				},
 				{
 					name: "toy3",
@@ -30,7 +30,7 @@ const getState = ({ getStore, setStore }) => {
 					age_group: "13+",
 					weight: "2lbs",
 					category: "",
-					id: "3"
+					id: 3
 				},
 				{
 					name: "toy4",
@@ -40,7 +40,7 @@ const getState = ({ getStore, setStore }) => {
 					age_group: "5-7",
 					weight: "24lbs",
 					category: "",
-					id: "4"
+					id: 4
 				},
 				{
 					name: "toy5",
@@ -60,7 +60,7 @@ const getState = ({ getStore, setStore }) => {
 					age_group: "1-200",
 					weight: "178lbs",
 					category: "",
-					id: "6"
+					id: 6
 				},
 				{
 					name: "toy7",
@@ -70,7 +70,7 @@ const getState = ({ getStore, setStore }) => {
 					age_group: "10-126",
 					weight: "804lbs",
 					category: "",
-					id: "7"
+					id: 7
 				},
 				{
 					name: "toy8",
@@ -80,7 +80,7 @@ const getState = ({ getStore, setStore }) => {
 					age_group: "16+",
 					weight: "23bs",
 					category: "",
-					id: "8"
+					id: 8
 				},
 				{
 					name: "toy9",
@@ -90,7 +90,7 @@ const getState = ({ getStore, setStore }) => {
 					age_group: "5-79",
 					weight: "249lbs",
 					category: "",
-					id: "9"
+					id: 9
 				},
 				{
 					name: "toy10",
@@ -100,7 +100,7 @@ const getState = ({ getStore, setStore }) => {
 					age_group: "11-29",
 					weight: "124lbs",
 					category: "",
-					id: "10"
+					id: 10
 				},
 				{
 					name: "toy11",
@@ -110,7 +110,7 @@ const getState = ({ getStore, setStore }) => {
 					age_group: "5-71",
 					weight: "249lbs",
 					category: "",
-					id: "11"
+					id: 11
 				},
 				{
 					name: "toy12",
@@ -120,7 +120,49 @@ const getState = ({ getStore, setStore }) => {
 					age_group: "13-29",
 					weight: "128lbs",
 					category: "",
-					id: "12"
+					id: 12
+				}
+			],
+			products_on_sale: [
+				{
+					name: "game1",
+					price: "$11",
+					image: "https://picsum.photos/id/1070/430/180",
+					description: "white",
+					age_group: "1-2",
+					weight: "123lbs",
+					category: "",
+					id: 1
+				},
+				{
+					name: "game2",
+					price: "$13",
+					image: "https://picsum.photos/id/905/430/180",
+					description: "yellow",
+					age_group: "10-12",
+					weight: "80lbs",
+					category: "",
+					id: 2
+				},
+				{
+					name: "game3",
+					price: "$15",
+					image: "https://picsum.photos/id/295/430/180",
+					description: "blue",
+					age_group: "13+",
+					weight: "2lbs",
+					category: "",
+					id: 3
+				},
+				{
+					name: "game4",
+					price: "$200",
+					image: "https://picsum.photos/id/1060/430/180",
+					description: "red",
+					age_group: "5-7",
+					weight: "24lbs",
+					category: "",
+					id: 4
 				}
 			],
 			user: [
