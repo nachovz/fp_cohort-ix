@@ -1,8 +1,12 @@
 import React from "react";
 import { Context } from "../store/appContext.js";
-import { CartItem } from "../component/cartItem";
+// import { CartItem } from "../component/cartItem";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 export class Cart extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return (
 			<div className="container">
@@ -18,10 +22,7 @@ export class Cart extends React.Component {
 					<div className="card-body">
 						<Context.Consumer>
 							{({ store, actions }) => {
-								return store.cartItem.map((elem, index) => {
-									{
-										/*console.log(elem.flying);*/
-									}
+								return store.cart.map((elem, index) => {
 									return (
 										<div className="row" key={index}>
 											<div className="col-12 col-sm-12 col-md-2 text-center">
@@ -53,18 +54,29 @@ export class Cart extends React.Component {
 												</div>
 												<div className="col-4 col-sm-4 col-md-4">
 													<div className="quantity">
-														<input type="button" value="+" className="plus" />
 														<input
+															type="button"
+															value="+"
+															className="plus"
+															onClick={() => actions.updateQuantity(elem.id, "add")}
+														/>
+														<input
+															readOnly
 															type="number"
 															step="1"
 															max="99"
 															min="1"
-															value="1"
+															value={elem.quantity}
 															title="Qty"
 															className="qty"
 															size="4"
 														/>
-														<input type="button" value="-" className="minus" />
+														<input
+															type="button"
+															value="-"
+															className="minus"
+															onClick={() => actions.updateQuantity(elem.id, "minus")}
+														/>
 													</div>
 												</div>
 												<div className="col-2 col-sm-2 col-md-2 text-right">
@@ -80,6 +92,12 @@ export class Cart extends React.Component {
 											</div>
 										</div>
 									);
+									{
+										/*.find(products => {
+										return products.id === elem.id;
+									});
+									console.log(products);*/
+									}
 								});
 							}}
 						</Context.Consumer>
@@ -111,7 +129,21 @@ export class Cart extends React.Component {
 								</a>
 							</Link>
 							<div className="pull-right" style={{ margin: 5 }}>
-								Total price: <b>50.00€</b>
+								<Context.Consumer>
+									{({ store }) => {
+										let cartTotal = 0;
+										console.log(store);
+										store.cart.forEach(item => {
+											console.log(item);
+											cartTotal += item.price * item.quantity;
+										});
+										return (
+											<div className="pull-right margin-5">
+												Total price: <b>{cartTotal}</b>
+											</div>
+										);
+									}}
+								</Context.Consumer>
 							</div>
 						</div>
 					</div>
@@ -120,3 +152,10 @@ export class Cart extends React.Component {
 		);
 	}
 }
+
+// Cart.propTypes = {
+// 	id: PropTypes.string,
+// 	quantity: PropTypes.number,
+// 	history: PropTypes.object,
+// 	index: PropTypes.number
+// };
