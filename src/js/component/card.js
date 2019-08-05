@@ -26,7 +26,8 @@ export const Card = props => {
 									<a
 										href="#"
 										className="btn btn-primary"
-										onClick={() => {
+										onClick={e => {
+											e.preventDefault();
 											actions.addToCart(props.cricket);
 										}}>
 										Add to cart
