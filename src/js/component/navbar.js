@@ -56,11 +56,11 @@ export class Navbar extends React.Component {
 								</Link>
 							</li>
 
-							<NavDropdown title="CATEGORIES" id="basic-nav-dropdown">
+							{/*<NavDropdown title="CATEGORIES" id="basic-nav-dropdown">
 								<NavDropdown.Item href="/gallery">TODDLERS</NavDropdown.Item>
 								<NavDropdown.Item href="/gallery">BOARD GAMES</NavDropdown.Item>
 								<NavDropdown.Item href="/gallery">COLLECTIBLES</NavDropdown.Item>
-							</NavDropdown>
+							</NavDropdown>*/}
 
 							<li className="nav-item active">
 								<Link to="/cart">

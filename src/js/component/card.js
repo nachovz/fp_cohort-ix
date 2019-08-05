@@ -19,7 +19,7 @@ export const Card = props => {
 						</Link>
 
 						<p className="card-text" />
-						<span>{props.price}</span>
+						<span>${props.price}</span>
 						<Context.Consumer>
 							{({ actions }) => {
 								return (

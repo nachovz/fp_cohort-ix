@@ -190,10 +190,14 @@ const getState = ({ getStore, setStore }) => {
 		actions: {
 			addToCart: koala => {
 				var tempStore = getStore();
-				// console.log(tempStore);
-				koala.quantity = 1;
-				tempStore.cart.push(koala);
-				setStore({ tempStore });
+				let cartItem = tempStore.cart.find(products => {
+					return products.id === koala.id;
+				});
+				if (!cartItem) {
+					koala.quantity = 1;
+					tempStore.cart.push(koala);
+					setStore({ tempStore });
+				}
 			},
 			deleteElement: index => {
 				var tempStore = getStore();

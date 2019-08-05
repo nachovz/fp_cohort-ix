@@ -48,7 +48,7 @@ export class Cart extends React.Component {
 													style={{ paddingTop: 5 }}>
 													<h6>
 														<strong>
-															{elem.price} <span className="text-muted">x</span>
+															${elem.price} <span className="text-muted">x</span>
 														</strong>
 													</h6>
 												</div>
@@ -139,7 +139,7 @@ export class Cart extends React.Component {
 										});
 										return (
 											<div className="pull-right margin-5">
-												Total price: <b>{cartTotal}</b>
+												Total price: <b>${cartTotal}</b>
 											</div>
 										);
 									}}
