@@ -27,6 +27,18 @@ const injectContext = PassedComponent => {
 			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
 			 * you should do your ajax requests or fetch api requests here
 			 **/
+			fetch("https://cohortix-fp-api.herokuapp.com/product")
+				.then(response => response.json())
+				.then(data => {
+					console.log(data);
+					let store = this.state.store;
+					this.setState({
+						store: {
+							...store,
+							product: data
+						}
+					});
+				});
 		}
 
 		render() {

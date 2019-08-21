@@ -21,14 +21,14 @@ export class Home extends React.Component {
 							return store.product.map((elem, index) => {
 								return (
 									<Card
-										name={elem.name}
-										price={elem.price}
-										description={elem.description}
-										image={elem.image}
-										age_group={elem.age_group}
+										name={elem.productName}
+										price={elem.productPrice}
+										description={elem.productDescription}
+										image="https://picsum.photos/id/161/430/180"
+										age_group={elem.productAgeRange}
 										weight={elem.weight}
 										key={index}
-										id={elem.id}
+										id={elem.ProductId}
 										cricket={elem}
 									/>
 								);
