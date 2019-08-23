@@ -39,6 +39,18 @@ const injectContext = PassedComponent => {
 						}
 					});
 				});
+			fetch("https://cohortix-fp-api.herokuapp.com/user")
+				.then(response => response.json())
+				.then(data => {
+					console.log(data);
+					let store = this.state.store;
+					this.setState({
+						store: {
+							...store,
+							user: data
+						}
+					});
+				});
 		}
 
 		render() {

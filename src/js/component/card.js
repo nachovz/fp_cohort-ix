@@ -23,15 +23,15 @@ export const Card = props => {
 						<Context.Consumer>
 							{({ actions }) => {
 								return (
-									<a
-										href="#"
+									<Link
+										to="#"
 										className="btn btn-primary"
 										onClick={e => {
 											e.preventDefault();
 											actions.addToCart(props.cricket);
 										}}>
 										Add to cart
-									</a>
+									</Link>
 								);
 							}}
 						</Context.Consumer>

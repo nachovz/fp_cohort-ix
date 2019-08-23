@@ -21,7 +21,7 @@ export class Home extends React.Component {
 							return store.product.map((elem, index) => {
 								return (
 									<Card
-										name={elem.productName}
+										name={elem.ProductName}
 										price={elem.productPrice}
 										description={elem.productDescription}
 										image="https://picsum.photos/id/161/430/180"

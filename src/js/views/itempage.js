@@ -13,29 +13,29 @@ export class Itempage extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ store }) => {
-					const list = store.product.filter(product => product.id === productid);
+					const list = store.product.filter(product => product.ProductId === productid);
 					console.log(list);
 					if (!list) return <h2>No product with id:</h2>;
 					return (
 						<div>
 							<div className="container">
 								<h1 className="my-4">
-									<small>{list[0].name}</small>
+									<small>{list[0].ProductName}</small>
 								</h1>
 
 								<div className="row">
 									<div className="col-md-8">
-										<img className="img-fluid" src={list[0].image} alt="" />
+										<img className="img-fluid" src="https://picsum.photos/id/1070/430/180" alt="" />
 									</div>
 
 									<div className="col-md-4">
 										<h3 className="my-3">Product Description</h3>
-										<p>{list[0].description}</p>
+										<p>{list[0].productDescription}</p>
 										<h3 className="my-3">Product Details</h3>
 										<ul>
-											<li>Age group: {list[0].age_group}</li>
-											<li>Weight: {list[0].weight}</li>
-											<li>Price: {list[0].price}</li>
+											<li>Age group: {list[0].productAgeRange}</li>
+											{/*<li>Weight: {list[0].weight}</li>*/}
+											<li>Price: {list[0].productPrice}</li>
 										</ul>
 									</div>
 								</div>

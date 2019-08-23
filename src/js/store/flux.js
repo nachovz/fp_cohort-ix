@@ -174,7 +174,8 @@ const getState = ({ getStore, setStore }) => {
 					password: "",
 					city: "",
 					state: "",
-					zip: ""
+					zip: "",
+					username: ""
 				}
 			],
 			cart: [
@@ -185,9 +186,87 @@ const getState = ({ getStore, setStore }) => {
 					description: "ss",
 					quantity: "33"
                 }*/
-			]
+			],
+			token: null,
+			tempLoggedUser: null
 		},
 		actions: {
+			registerUser: (email, name, last, username, password) => {
+				fetch("https://cohortix-fp-api.herokuapp.com/user", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						email: email,
+						userFirstName: name,
+						userLastName: last,
+						userName: username,
+						addresses: [],
+						password: password
+					})
+				});
+			},
+			logout: () => {
+				setStore({ token: null, tempLoggedUser: null });
+			},
+			authenticateLogin: (email, username) => {
+				console.log("email:", email);
+				const store = getStore();
+				const url = process.env.HOST + "/login";
+				console.log("url:", url);
+				let loggedUser = store.user.find(item => {
+					return item.email == email;
+				});
+				console.log("user :", loggedUser);
+				fetch("https://cohortix-fp-api.herokuapp.com/login", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({
+						email: email,
+						userName: username
+					})
+				})
+					.then(response => response.json())
+					.then(token => {
+						console.log("token:", token);
+						if (typeof token.msg != "undefined") {
+							// Notify.error(token.msg);
+						} else {
+							setStore({ token: token.jwt, tempLoggedUser: loggedUser });
+							// history.push("/");
+						}
+					});
+				// .then(changeStatus => {
+				// 	fetch(`${process.env.HOST}/client/${loggedUser.client_id}`, {
+				// 		method: "PUT",
+				// 		headers: {
+				// 			"Content-Type": "application/json",
+				// 			authorization: "Bearer " + store.token
+				// 		},
+				// 		body: JSON.stringify({
+				// 			client_login_status: true
+				// 		})
+				// 	});
+				// })
+				// .then(getClientBack => {
+				// 	const url = process.env.HOST + "/client";
+				// 	fetch(url, {
+				// 		method: "GET",
+				// 		headers: {
+				// 			"Content-Type": "application/json"
+				// 		}
+				// 	})
+				// 		.then(response => response.json())
+				// 		.then(data => {
+				// 			const store = getStore();
+				// 			setStore({ client: data });
+				// 		})
+				// 		.catch(error => console.error("Error: It didn't work. Try again", error));
+				// })
+				// .catch(error => console.error("Error: It didn't work. Try again", error));
+				setStore({ tempLoggedUser: loggedUser });
+			},
 			addToCart: koala => {
 				var tempStore = getStore();
 				let cartItem = tempStore.cart.find(products => {
