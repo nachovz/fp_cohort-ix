@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => (
-	<div className="card">
+	<div>
 		<div className="card-header" />
 		<div className="card-body">
 			<div className="row">

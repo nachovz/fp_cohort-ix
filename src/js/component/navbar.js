@@ -71,10 +71,12 @@ export class Navbar extends React.Component {
 							</li>
 							<li className="nav-item active">
 								<div>
+									{/*}
 									<Button color="success" onClick={this.toggle}>
 										Leave a review
 										{this.props.buttonLabel}
 									</Button>
+                                    */}
 									<Modal
 										isOpen={this.state.modal}
 										toggle={this.toggle}

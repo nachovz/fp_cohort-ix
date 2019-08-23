@@ -3,6 +3,7 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			product: [
 				{
+					/*{
 					name: "toy1",
 					price: 11,
 					image: "https://picsum.photos/id/1070/430/180",
@@ -121,6 +122,7 @@ const getState = ({ getStore, setStore }) => {
 					weight: "128lbs",
 					category: "",
 					id: 12
+                }*/
 				}
 			],
 			products_on_sale: [
