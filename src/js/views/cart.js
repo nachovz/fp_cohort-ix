@@ -138,7 +138,7 @@ export class Cart extends React.Component {
 										let cartTotal = 0;
 
 										store.cart.forEach(item => {
-											cartTotal += item.price * item.quantity;
+											cartTotal += item.productPrice * item.quantity;
 										});
 										return (
 											<div className="pull-right margin-5">
