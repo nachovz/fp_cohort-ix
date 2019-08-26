@@ -211,14 +211,13 @@ const getState = ({ getStore, setStore }) => {
 				setStore({ token: null, tempLoggedUser: null });
 			},
 			authenticateLogin: (email, username) => {
-				console.log("email:", email);
 				const store = getStore();
 				const url = process.env.HOST + "/login";
-				console.log("url:", url);
+
 				let loggedUser = store.user.find(item => {
 					return item.email == email;
 				});
-				console.log("user :", loggedUser);
+
 				fetch("https://cohortix-fp-api.herokuapp.com/login", {
 					method: "POST",
 					headers: {
@@ -231,7 +230,6 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(response => response.json())
 					.then(token => {
-						console.log("token:", token);
 						if (typeof token.msg != "undefined") {
 							// Notify.error(token.msg);
 						} else {
@@ -287,9 +285,9 @@ const getState = ({ getStore, setStore }) => {
 			},
 			updateQuantity: (id, math, history) => {
 				const store = getStore();
-
+				console.log("updateQuantity Id", id);
 				let cartItem = store.cart.find(products => {
-					return products.id === id;
+					return products.ProductId === id;
 				});
 				console.dir(cartItem);
 				if (math === "add") {

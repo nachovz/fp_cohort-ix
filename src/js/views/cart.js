@@ -58,7 +58,9 @@ export class Cart extends React.Component {
 															type="button"
 															value="+"
 															className="plus"
-															onClick={() => actions.updateQuantity(elem.id, "add")}
+															onClick={() =>
+																actions.updateQuantity(elem.ProductId, "add")
+															}
 														/>
 														<input
 															readOnly
@@ -75,7 +77,9 @@ export class Cart extends React.Component {
 															type="button"
 															value="-"
 															className="minus"
-															onClick={() => actions.updateQuantity(elem.id, "minus")}
+															onClick={() =>
+																actions.updateQuantity(elem.ProductId, "minus")
+															}
 														/>
 													</div>
 												</div>
@@ -132,9 +136,8 @@ export class Cart extends React.Component {
 								<Context.Consumer>
 									{({ store }) => {
 										let cartTotal = 0;
-										console.log(store);
+
 										store.cart.forEach(item => {
-											console.log(item);
 											cartTotal += item.price * item.quantity;
 										});
 										return (

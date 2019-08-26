@@ -14,7 +14,7 @@ export class Itempage extends React.Component {
 			<Context.Consumer>
 				{({ store }) => {
 					const list = store.product.filter(product => product.ProductId === productid);
-					console.log(list);
+
 					if (!list) return <h2>No product with id:</h2>;
 					return (
 						<div>
@@ -35,7 +35,7 @@ export class Itempage extends React.Component {
 										<ul>
 											<li>Age group: {list[0].productAgeRange}</li>
 											{/*<li>Weight: {list[0].weight}</li>*/}
-											<li>Price: {list[0].productPrice}</li>
+											<li>Price: ${list[0].productPrice}</li>
 										</ul>
 									</div>
 								</div>
