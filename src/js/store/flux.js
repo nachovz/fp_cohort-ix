@@ -272,7 +272,7 @@ const getState = ({ getStore, setStore }) => {
 			addToCart: koala => {
 				var tempStore = getStore();
 				let cartItem = tempStore.cart.find(products => {
-					return products.id === koala.id;
+					return products.ProductId === koala.ProductId;
 				});
 				if (!cartItem) {
 					koala.quantity = 1;

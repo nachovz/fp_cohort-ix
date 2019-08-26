@@ -13,7 +13,7 @@ export class Cart extends React.Component {
 				<div className="card shopping-cart">
 					<div className="card-header bg-dark text-light">
 						<i className="fa fa-shopping-cart" aria-hidden="true" />
-						Shopping cart
+						<a>Shopping cart</a>
 						{/*<a href="" className="btn btn-outline-info btn-sm pull-right">
 							Continue shopping
 						</a>*/}
@@ -28,7 +28,7 @@ export class Cart extends React.Component {
 											<div className="col-12 col-sm-12 col-md-2 text-center">
 												<img
 													className="img-responsive"
-													src={elem.image}
+													src={elem.photo[0].PictureURL}
 													alt="prewiew"
 													width="120"
 													height="80"
@@ -36,10 +36,10 @@ export class Cart extends React.Component {
 											</div>
 											<div className="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
 												<h4 className="product-name">
-													<strong>{elem.name}</strong>
+													<strong>{elem.ProductName}</strong>
 												</h4>
 												<h4>
-													<small>{elem.description}</small>
+													<small>{elem.productDescription}</small>
 												</h4>
 											</div>
 											<div className="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
@@ -48,7 +48,7 @@ export class Cart extends React.Component {
 													style={{ paddingTop: 5 }}>
 													<h6>
 														<strong>
-															${elem.price} <span className="text-muted">x</span>
+															${elem.productPrice} <span className="text-muted">x</span>
 														</strong>
 													</h6>
 												</div>

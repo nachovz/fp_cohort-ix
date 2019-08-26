@@ -6,25 +6,27 @@ import { Link } from "react-router-dom";
 // import { Button } from "reactstrap";
 export const Card = props => {
 	return (
-		<React.Fragment>
-			<div className="nav justify-content-center">
-				<div className="card" style={{ width: 350 }}>
-					<img className="card-img-top" src={props.image} alt="Card image cap" />
+		<Context.Consumer>
+			{({ actions }) => {
+				return (
+					<React.Fragment>
+						<div className="card" style={{ width: 350 }}>
+							<img className="card-img-top" src={props.image} alt="Card image cap" />
 
-					<div className="card-body">
-						<Link to={"/itempage/" + props.id}>
-							<button type="button" className="btn btn-link">
-								<h5 className="card-title">{props.name}</h5>
-							</button>
-						</Link>
+							<div className="card-body">
+								<div className="justify-content-center">
+									<Link to={"/itempage/" + props.id}>
+										<button type="button" className="btn btn-link">
+											<h5 className="card-title">{props.name}</h5>
+										</button>
+									</Link>
+								</div>
+								<p className="card-text" />
 
-						<p className="card-text" />
-
-						<span>${props.price}</span>
-
-						<Context.Consumer>
-							{({ actions }) => {
-								return (
+								<div className="justify-content-center">${props.price}</div>
+							</div>
+							<div className="card-footer">
+								<div className="justify-content-center">
 									<Link
 										to="#"
 										className="btn btn-primary"
@@ -34,13 +36,13 @@ export const Card = props => {
 										}}>
 										Add to cart
 									</Link>
-								);
-							}}
-						</Context.Consumer>
-					</div>
-				</div>
-			</div>
-		</React.Fragment>
+								</div>
+							</div>
+						</div>
+					</React.Fragment>
+				);
+			}}
+		</Context.Consumer>
 	);
 };
 
