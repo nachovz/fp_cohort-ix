@@ -44,7 +44,7 @@ export class Login extends React.Component {
 										type="text"
 										id="inputPassword"
 										className="form-control"
-										placeholder="Username"
+										placeholder="Password"
 										required=""
 									/>
 									<div className="checkbox mb-3">

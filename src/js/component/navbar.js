@@ -79,17 +79,18 @@ export class Navbar extends React.Component {
 								<NavDropdown.Item href="/gallery">BOARD GAMES</NavDropdown.Item>
 								<NavDropdown.Item href="/gallery">COLLECTIBLES</NavDropdown.Item>
 							</NavDropdown>*/}
-
-										<li className="nav-item active">
-											<Link to="/cart">
-												<a className="nav-link" href="#">
-													<i className="fas fa-shopping-cart" />
-													<span className="badge badge-success ml-2">
-														{store.cart.length}
-													</span>
-												</a>
-											</Link>
-										</li>
+										{store.token !== null && (
+											<li className="nav-item active">
+												<Link to="/cart">
+													<a className="nav-link" href="#">
+														<i className="fas fa-shopping-cart" />
+														<span className="badge badge-success ml-2">
+															{store.cart.length}
+														</span>
+													</a>
+												</Link>
+											</li>
+										)}
 										<li className="nav-item active">
 											<div>
 												{/*}
