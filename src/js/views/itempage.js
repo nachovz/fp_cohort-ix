@@ -14,7 +14,7 @@ export class Itempage extends React.Component {
 			<Context.Consumer>
 				{({ store }) => {
 					const list = store.product.filter(product => product.ProductId === productid);
-
+					console.log(list.photo);
 					if (!list) return <h2>No product with id:</h2>;
 					return (
 						<div>
@@ -25,11 +25,7 @@ export class Itempage extends React.Component {
 
 								<div className="row">
 									<div className="col-md-8">
-										<img
-											className="img-fluid"
-											src={elem.photo && elem.photo[0].PictureURL}
-											alt=""
-										/>
+										<img className="img-fluid" src="https://picsum.photos/id/237/200/300" alt="" />
 									</div>
 
 									<div className="col-md-4">
