@@ -19,12 +19,13 @@ export class Home extends React.Component {
 					<Context.Consumer>
 						{({ store }) => {
 							return store.product.map((elem, index) => {
+								console.log("####", elem.photo);
 								return (
 									<Card
 										name={elem.ProductName}
 										price={elem.productPrice}
 										description={elem.productDescription}
-										image="https://picsum.photos/id/161/430/180"
+										image={elem.photo && elem.photo[0].PictureURL}
 										age_group={elem.productAgeRange}
 										weight={elem.weight}
 										key={index}
