@@ -25,13 +25,13 @@ export class Createaccount extends React.Component {
 							<div className="container">
 								<div className="form-row">
 									<div className="form-group col-md-6">
-										<label htmlFor="inputEmail4">Full name</label>
+										<label htmlFor="inputEmail4">First name</label>
 										<input
 											onChange={e => this.setState({ name: e.target.value })}
 											type="text"
 											className="form-control"
 											id="inputEmail4"
-											placeholder="Full name"
+											placeholder="First name"
 										/>
 									</div>
 									<div className="form-group col-md-6">
@@ -41,17 +41,17 @@ export class Createaccount extends React.Component {
 											type="text"
 											className="form-control"
 											id="inputEmail4"
-											placeholder="Full name"
+											placeholder="Last name"
 										/>
 									</div>
 									<div className="form-group col-md-6">
-										<label htmlFor="inputEmail4">User name</label>
+										<label htmlFor="inputEmail4">Password</label>
 										<input
 											onChange={e => this.setState({ username: e.target.value })}
 											type="text"
 											className="form-control"
 											id="inputEmail4"
-											placeholder="User name"
+											placeholder="Password"
 										/>
 									</div>
 									<div className="form-group col-md-6">
@@ -64,7 +64,7 @@ export class Createaccount extends React.Component {
 											placeholder="Email"
 										/>
 									</div>
-									<div className="form-group col-md-6">
+									{/*<div className="form-group col-md-6">
 										<label htmlFor="inputPassword4">Password</label>
 										<input
 											onChange={e => this.setState({ password: e.target.value })}
@@ -82,7 +82,7 @@ export class Createaccount extends React.Component {
 											id="inputPassword4"
 											placeholder="RE-enter Password"
 										/>
-									</div>
+									</div>*/}
 								</div>
 								<div className="form-group">
 									<label htmlFor="inputAddress">Address</label>

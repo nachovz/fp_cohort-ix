@@ -25,7 +25,11 @@ export class Itempage extends React.Component {
 
 								<div className="row">
 									<div className="col-md-8">
-										<img className="img-fluid" src="https://picsum.photos/id/237/200/300" alt="" />
+										<img
+											className="img-fluid"
+											src={list.photo && list.photo[0].PictureURL}
+											alt=""
+										/>
 									</div>
 
 									<div className="col-md-4">
